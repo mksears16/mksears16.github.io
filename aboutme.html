@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Me</title>
+<link href="css/modern-normalize.css" rel="stylesheet"/>
+<link href="css/miakathrynsears.css" rel="stylesheet"/>
+<!-- https://fonts.google.com/icons -->
+<link href="https://use.typekit.net/eym4cgq.css" rel="stylesheet"/>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/bf37eaf948.js"></script>
+</head>
+<body class="body">
+<div class="breakpoint-indicator"></div><div class="navigation whitecard">
+<a class="logo" href="index.html">miakathrynsears.com</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Drop down menu" class="toggle">
+<i class="fa-solid fa-bars fa-lg"></i>
+</button>
+<nav class="navbar" id="siteNav">
+<ul>
+<li class="item mobile-only"><a class="navitem" href="index.html">Home</a></li><li class="item"><a class="navitem" href="casestudies.html">Case Studies</a></li><li class="item"><a class="navitem" href="graphicdesign.html">Graphic Design</a></li><li class="item"><a class="navitem" href="resume.html">Resume</a></li><li class="item"><a aria-current="page" class="navitem" href="aboutme.html">About Me</a></li>
+</ul>
+</nav>
+</div>
+<!-- navigation -->
+<!-- navigation -->
+
+<!-- call to action -->
+<div class="align">
+<h1>
+            A little bit more about me...
+        </h1>
+<h4>
+            A designer who never really stopped doodling, just started doing it with intention.
+        </h4>
+</div>
+<!-- Card 1: story + travel -->
+<div class="cardnoanimate bluecard about-card">
+  <div class="about-grid">
+    <img alt="mia in portugal" class="about-hero" src="images/miatravelpicture.jpg"/>
+
+    <div>
+      <h4>I’m a designer who learns best by going places, noticing details, and asking why things work.</h4>
+      <p>I’m constantly inspired by the world around me, sometimes that means studying interfaces, and sometimes it means being 5 hours ahead studying abroad in Portugal (pictured here).</p>
+    </div>
+  </div>
+</div>
+<div class="cardnoanimate whitecard about-card">
+  <div class="about-photos">
+    <img alt="mia taking a picture" class="projectimgsm" src="images/miatakingpicture.jpg"/>
+    <img alt="mia in chicago" class="projectimgsm" src="images/miachicago.jpg"/>
+  </div>
+
+  <p>Travel and exploration shape how I approach design. Observing new environments, cultures, and visual systems pushes me to think more intentionally about usability, accessibility, and storytelling. I’m always studying other artists and designers, then translating what I learn directly into my UI/UX and graphic design work.</p>
+</div>
+
+<!-- Card 2: art foundation -->
+<div class="cardnoanimate bluecard card about-card about-split">
+  <div>
+    <h4>Traditional art is the foundation of how I design digitally.</h4>
+    <p>My background in traditional art plays a huge role in how I design digitally. Painting and drawing trained me to think about composition, hierarchy, and balance before I ever opened Figma.</p>
+  </div>
+  <img alt="mia painting" class="about-paint" src="images/miapainting.jpg"/>
+</div>
+
+<!-- Card 3: closer -->
+<div class="cardnoanimate whitecard about-card about-closer">
+  <h4>Whether I’m designing digitally or working hands-on, I approach every project with curiosity, intention, and a strong eye for detail.</h4>
+  <p class="greytext">I care deeply about how people experience design, and I’m always looking for ways to make that experience more thoughtful, engaging, and human.</p>
+</div>
+
+
+<!-- stand out work -->
+<!-- footer + contact -->
+<footer>
+<div class="row">
+<h3>
+            Keep in Touch!
+        </h3>
+<div class="container row">
+<a href="mailto:mia.kathryn.sears@gmail.com"><i class="fa-regular fa-message"></i></a> <!-- mail to attribute from w3schools -->
+<a href="https://www.linkedin.com/in/miakathsears/"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/miakaths_sketchbook/"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+</footer>
+<!-- java -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navWrappers = document.querySelectorAll(".navigation, .navigation2");
+
+  navWrappers.forEach((wrap, i) => {
+    const btn = wrap.querySelector(".toggle");
+    const nav = wrap.querySelector(".navbar");
+    if (!btn || !nav) return;
+
+    if (!nav.id) nav.id = "siteNav-" + i;
+    btn.setAttribute("aria-controls", nav.id);
+
+    const setOpen = (open) => {
+      wrap.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    setOpen(false);
+
+    btn.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    nav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) setOpen(false);
+    });
+  });
+});
+</script>
+</body>
+</html>

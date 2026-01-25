@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Case Studies</title>
+<link href="css/modern-normalize.css" rel="stylesheet"/>
+<link href="css/miakathrynsears.css" rel="stylesheet"/>
+<!-- https://fonts.google.com/icons -->
+<link href="https://use.typekit.net/eym4cgq.css" rel="stylesheet"/>
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/bf37eaf948.js"></script>
+</head>
+<body class="body">
+<div class="breakpoint-indicator"></div><div class="navigation whitecard">
+<a class="logo" href="index.html">miakathrynsears.com</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Drop down menu" class="toggle">
+<i class="fa-solid fa-bars fa-lg"></i>
+</button>
+<nav class="navbar" id="siteNav">
+<ul>
+<li class="item mobile-only"><a class="navitem" href="index.html">Home</a></li><li class="item"><a aria-current="page" class="navitem" href="casestudies.html">Case Studies</a></li><li class="item"><a class="navitem" href="graphicdesign.html">Graphic Design</a></li><li class="item"><a class="navitem" href="resume.html">Resume</a></li><li class="item"><a class="navitem" href="aboutme.html">About Me</a></li>
+</ul>
+</nav>
+</div>
+<!-- navigation -->
+
+
+<!-- call to action -->
+<div class="align">
+<h2>
+            How I do what I do.
+        </h2>
+<h3>
+            See how ideas evolve from sketches to polished products.
+        
+</h3></div>
+<!-- stand out work -->
+<!-- case studies -->
+<section class="card whitecard">
+<div class="project">
+<a href="individualprojects/amusmentparkride.html">
+<img alt="Amusement park sketch" class="example" src="images/shadowspark.jpg"/>
+</a>
+<div class="projectinfo">
+<h2>
+                Letting the Story Lead Design
+            </h2>
+<div class="keys">
+<a class="keyitem2" href="#">Experience Design</a>
+<a class="keyitem" href="#">Accessiblility</a>
+<a class="keyitem2" href="#">Prototyping</a>
+</div>
+<div class="keydetail">
+<p class="greytext midtext">
+                    Working within the constraints of the project, I developed a story-driven design that explored audience satisfaction in a theme park experience.
+                </p>
+</div>
+</div>
+</div></section>
+<!-- footer + contact -->
+<footer>
+<div class="row">
+<h3>
+            Keep in Touch!
+        </h3>
+<div class="container row">
+<a href="mailto:mia.kathryn.sears@gmail.com"><i class="fa-regular fa-message"></i></a> <!-- mail to attribute from w3schools -->
+<a href="https://www.linkedin.com/in/miakathsears/"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/miakaths_sketchbook/"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+</footer>
+<!-- java -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navWrappers = document.querySelectorAll(".navigation, .navigation2");
+
+  navWrappers.forEach((wrap, i) => {
+    const btn = wrap.querySelector(".toggle");
+    const nav = wrap.querySelector(".navbar");
+    if (!btn || !nav) return;
+
+    if (!nav.id) nav.id = "siteNav-" + i;
+    btn.setAttribute("aria-controls", nav.id);
+
+    const setOpen = (open) => {
+      wrap.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    setOpen(false);
+
+    btn.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    nav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) setOpen(false);
+    });
+  });
+});
+</script></body>
+</html>
