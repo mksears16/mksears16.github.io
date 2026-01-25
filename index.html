@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mia Kathryn Sears</title>
+<link href="css/modern-normalize.css" rel="stylesheet"/>
+<link href="css/miakathrynsears.css" rel="stylesheet"/>
+<!-- https://fonts.google.com/icons -->
+<link href="https://use.typekit.net/eym4cgq.css" rel="stylesheet"/>
+<!-- menu tab -->
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/bf37eaf948.js"></script>
+
+</head>
+<body>
+<div class="breakpoint-indicator"></div><div class="navigation whitecard">
+<a class="logo" href="index.html">miakathrynsears.com</a>
+<button aria-controls="siteNav" aria-expanded="false" aria-label="Drop down menu" class="toggle">
+<i class="fa-solid fa-bars fa-lg"></i>
+</button>
+<nav class="navbar" id="siteNav">
+<ul>
+<li class="item mobile-only"><a aria-current="page" class="navitem" href="index.html">Home</a></li><li class="item"><a class="navitem" href="casestudies.html">Case Studies</a></li><li class="item"><a class="navitem" href="graphicdesign.html">Graphic Design</a></li><li class="item"><a class="navitem" href="resume.html">Resume</a></li><li class="item"><a class="navitem" href="aboutme.html">About Me</a></li>
+</ul>
+</nav>
+</div>
+<!-- navigation -->
+
+<div class="fullwidth whitecard">
+<!-- call to action -->
+<div class="doodleonport">
+<div class="doodlerow">
+<div class="greeting" id="greeting">
+<h3>“Mia, stop doodling on your homework.”</h3>
+<h3>Phew, thank goodness no one said anything about my portfolio.</h3>
+<p class="greytext smalltext click">Click to draw.</p>
+</div>
+<canvas id="doodle"></canvas>
+</div>
+</div>
+</div>
+<div class="fullwidth body">
+<!-- introduction -->
+<section class="card bluecard intro-card">
+<div class="row">
+  <a class="jump" href="#projects">
+    <img alt="flower icon" class="icon" src="images/flower.png"/>
+    Jump to Projects
+  </a>
+</div>
+<!-- LEFT SIDE -->
+<div class="container padding">
+<h2>Just an intro...</h2>
+<div class="standardtext">
+<p class="becloserpls">I design things, obsess over the details, and probably have too many fonts installed.</p>
+<p class="becloserplssmall">With a background studying Informatics, Graphic Design and Art History, I bring unique ideas and even better vibes... Perfect for your next project (just saying).</p>
+</div>
+</div>
+<!-- RIGHT SIDE -->
+<div class="container">
+<img alt="Photo of Mia Sears" class="projectimg" src="images/miapfp.png"/>
+</div>
+</section>
+<!-- stand out work -->
+<article>
+<div class="align">
+<h1 id="projects">
+                Projects
+            </h1>
+<p>
+                A snapshot of what I’ve been creating lately.
+            </p>
+</div>
+<section class="card whitecard">
+<div class="project projectreverse">
+<a href="individualprojects/weddinginvites.html">
+<img alt="Close up of Chicago Postcard" class="example" src="images/frontofpostcard.png"/>
+</a>
+<div class="projectinfo">
+<h2>
+                    Anything but Boring Wedding Invitations
+                </h2>
+<div class="keys">
+<a class="keyitem2" href="#projects">Print Ready</a>
+<a class="keyitem" href="#projects">Adobe Illustrator</a>
+<a class="keyitem2" href="#projects">Watercolor</a>
+</div>
+<div class="keydetail">
+<p class="greytext midtext">
+                    My clients said they wanted something new, memorable, and most importantly, anything but boring.
+                </p>
+</div>
+</div>
+</div>
+</section>
+<section class="card whitecard">
+<div class="project">
+<a href="individualprojects/amusmentparkride.html">
+<img alt="Amusement park sketch" class="example" src="images/shadowspark.jpg"/>
+</a>
+<div class="projectinfo">
+<h2>
+                    Letting the Story Lead Design
+                </h2>
+<div class="keys">
+<a class="keyitem2" href="#projects">Experience Design</a>
+<a class="keyitem" href="#projects">Accessiblility</a>
+<a class="keyitem2" href="#projects">Prototyping</a>
+</div>
+<div class="keydetail">
+<p class="greytext midtext">
+                        Working within the constraints of the project, I developed a story-driven design that explored audience satisfaction in a theme park experience.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<section class="card whitecard">
+<div class="project projectreverse">
+<a href="individualprojects/trainingcamp.html">
+<img alt="Mia Sears wearing Colts Merchandise" class="example" src="images/coltsportfolio.png"/>
+</a>
+<div class="projectinfo">
+<h2>
+                    Making graphics for a massive sports crowd
+                </h2>
+<div class="keys">
+<a class="keyitem2" href="#projects">Merchandising</a>
+<a class="keyitem" href="#projects">Iteration and Feedback</a>
+<a class="keyitem2" href="#projects">Procreate</a>
+</div>
+<div class="keydetail">
+<p class="greytext midtext">
+                        Broad appeal design experience working under the NFL Colts brand guidelines to make a lasting experience for local fans.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+</article>
+</div>
+<!-- footer + contact -->
+<footer>
+<div class="row">
+<h3>
+            Keep in Touch!
+        </h3>
+<div class="container row">
+<a href="mailto:mia.kathryn.sears@gmail.com"><i class="fa-regular fa-message"></i></a> <!-- mail to attribute from w3schools -->
+<a href="https://www.linkedin.com/in/miakathsears/"><i class="fa-brands fa-linkedin-in"></i></a>
+<a href="https://www.instagram.com/miakaths_sketchbook/"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+</footer>
+<!-- java -->
+<!-- from class -->
+
+<!-- java from JavaScript Academy, used ChatGPT to help specifically modify the sizing of the javascript to match Greeting size so the javascript worked -->
+<script>
+            const canvas = document.getElementById("doodle");
+            const ctx = canvas.getContext("2d");
+            
+            function resizeCanvas() {
+                const textBlock = document.getElementById("greeting");
+            
+                const displayWidth = textBlock.offsetWidth;
+                const displayHeight = textBlock.offsetHeight;
+            
+                canvas.style.width = displayWidth + "px";
+                canvas.style.height = displayHeight + "px";
+            
+                const dpr = window.devicePixelRatio || 1;
+                canvas.width = displayWidth * dpr;
+                canvas.height = displayHeight * dpr;
+            
+                ctx.setTransform(1, 0, 0, 1, 0, 0);
+                ctx.scale(dpr, dpr);
+            
+                ctx.lineCap = "round";
+                ctx.lineJoin = "round";
+                ctx.strokeStyle = "rgb(114, 183, 204)";
+                ctx.lineWidth = 6;
+            }
+            window.addEventListener("load", resizeCanvas);
+            window.addEventListener("resize", resizeCanvas);
+            
+            let drawing = false;
+            
+            function getPos(e) {
+                const rect = canvas.getBoundingClientRect();
+                return {
+                    x: e.clientX - rect.left,
+                    y: e.clientY - rect.top,
+                };
+            }
+            
+            canvas.addEventListener("pointerdown", (e) => {
+                drawing = true;
+                const { x, y } = getPos(e);
+                ctx.beginPath();
+                ctx.moveTo(x, y);
+            });
+            
+            canvas.addEventListener("pointermove", (e) => {
+                if (!drawing) return;
+                const { x, y } = getPos(e);
+                ctx.lineTo(x, y);
+                ctx.stroke();
+            });
+            
+            canvas.addEventListener("pointerup", () => drawing = false);
+            canvas.addEventListener("pointerleave", () => drawing = false);
+    </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const navWrappers = document.querySelectorAll(".navigation, .navigation2");
+
+  navWrappers.forEach((wrap, i) => {
+    const btn = wrap.querySelector(".toggle");
+    const nav = wrap.querySelector(".navbar");
+    if (!btn || !nav) return;
+
+    if (!nav.id) nav.id = "siteNav-" + i;
+    btn.setAttribute("aria-controls", nav.id);
+
+    const setOpen = (open) => {
+      wrap.classList.toggle("is-open", open);
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+
+    setOpen(false);
+
+    btn.addEventListener("click", () => {
+      const isOpen = btn.getAttribute("aria-expanded") === "true";
+      setOpen(!isOpen);
+    });
+
+    nav.querySelectorAll("a").forEach(a => {
+      a.addEventListener("click", () => setOpen(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 768) setOpen(false);
+    });
+  });
+});
+</script></body>
+</html>
